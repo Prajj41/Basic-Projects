@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(240, 236, 236, 0.5);
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Decorative lines */
+.container::before, .container::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #363232;
+  top: 30px;
+}
+
+.container::before {
+  left: 0;
+}
+
+.container::after {
+  right: 0;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Add this style to highlight completed tasks */
+li.done {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Add this style for the checkbox */
+li input[type="checkbox"] {
+  margin-right: 5px;
+}
